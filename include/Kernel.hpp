@@ -9,6 +9,8 @@
 class Kernel {
 private:
     int next_pid = 1;
+    int global_time = 0;
+    int context_switches = 0;
     std::vector<std::shared_ptr<Process>> processes;
     std::queue<std::shared_ptr<Process>> ready_queue;
 
