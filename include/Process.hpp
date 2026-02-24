@@ -12,7 +12,8 @@ class Process {
 public:
     int pid;
     State state;
-    std::function<void()> task;
+    int remaining_time;
+    std::function<void(int)> task;
 
-    Process(int id, std::function<void()> t);
+    Process(int id, int exec_time, std::function<void(int)> t);
 };

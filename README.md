@@ -14,3 +14,20 @@ PandaOS simulates core operating system concepts including:
 This project is designed to explore low-level systems programming concepts in a clean and extensible architecture.
 
 ## Architecture
+User Programs
+↓
+Kernel
+↓
+Scheduler
+↓
+Process Control Blocks
+
+
+## Build Instructions
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./pandaos

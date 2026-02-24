@@ -4,7 +4,6 @@
 #include <memory>
 #include <queue>
 #include <functional>
-
 #include "Process.hpp"
 
 class Kernel {
@@ -14,6 +13,6 @@ private:
     std::queue<std::shared_ptr<Process>> ready_queue;
 
 public:
-    int create_process(std::function<void()> task);
+    int create_process(int exec_time, std::function<void(int)> task);
     void run();
 };
